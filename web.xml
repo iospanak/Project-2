@@ -1,0 +1,36 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+<servlet>
+   <servlet-name>Ch5</servlet-name>
+   <servlet-class>com.Project2.web.CurrencyConv</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>Ch5</servlet-name>
+   <url-pattern>/CurrencyConv</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Ch6</servlet-name>
+   <servlet-class>com.Project2.web.GetReport</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>Ch6</servlet-name>
+   <url-pattern>/GetReport</url-pattern>
+</servlet-mapping>
+
+<context-param>
+   <param-name>report</param-name>
+   <param-value> NULL </param-value>
+</context-param>
+
+<listener>
+   <listener-class>
+com.Project2.web.ContextListener
+   </listener-class>
+</listener>
+</web-app>
